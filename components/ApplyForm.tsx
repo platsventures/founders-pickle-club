@@ -20,7 +20,7 @@ function SubmitButton() {
       disabled={pending}
       className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-brick px-6 py-3.5 font-sans text-base font-extrabold text-sand transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink disabled:cursor-not-allowed disabled:opacity-60 sm:min-h-0 sm:text-[clamp(0.9375rem,2vw,1rem)]"
     >
-      {pending ? "Submitting…" : "Submit application →"}
+      {pending ? "Submitting…" : "Submit application"}
     </button>
   );
 }
@@ -83,8 +83,9 @@ export default function ApplyForm() {
               join the club.
             </h2>
             <p className="mt-5 max-w-md text-base leading-relaxed text-[#fbeeda] sm:mt-[clamp(1.25rem,3vw,2rem)] sm:text-[clamp(0.9375rem,2vw,1rem)]">
-              Tell us a little about you. We review every application and reach
-              out about your nearest court.
+              No pickleball experience required. Just bring your energy and
+              curiosity. Tell us a little about you and we&apos;ll reach out
+              about your nearest court.
             </p>
           </div>
         </FadeIn>
@@ -98,7 +99,7 @@ export default function ApplyForm() {
                 </h3>
                 <p className="mt-4 text-[clamp(0.9375rem,2vw,1rem)] leading-relaxed text-clay">
                   Application received. We&apos;ll be in touch about your
-                  nearest court within a few days. Paddles ready.
+                  nearest court within a few days. See you on the court.
                 </p>
                 <button
                   type="button"
@@ -195,7 +196,7 @@ export default function ApplyForm() {
                       name="reason"
                       required
                       rows={3}
-                      placeholder="I build, I rally, I bring good energy."
+                      placeholder="Keen to meet builders, learn the game, and bring good energy."
                       onFocus={handleFieldInteraction}
                       aria-invalid={!!state.errors?.reason}
                       aria-describedby={state.errors?.reason ? "reason-error" : undefined}

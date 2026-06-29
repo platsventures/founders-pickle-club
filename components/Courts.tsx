@@ -47,8 +47,10 @@ export default function Courts() {
           </FadeIn>
 
           <FadeIn delay={0.05}>
-            <p className="max-w-full font-mono text-[10px] uppercase leading-relaxed tracking-[0.1em] text-stone sm:max-w-[320px] sm:text-[11px] sm:tracking-[0.12em]">
-              Weekly socials, monthly mixers. New cities added as members land.
+            <p className="max-w-full font-mono text-[10px] uppercase leading-relaxed tracking-[0.1em] text-stone sm:max-w-[360px] sm:text-[11px] sm:tracking-[0.12em]">
+              Weekly casual sessions, post-court hangouts, and the occasional
+              clinic or round-robin. Auckland and Wellington live now. More
+              cities as members land.
             </p>
           </FadeIn>
         </div>

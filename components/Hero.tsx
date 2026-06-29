@@ -40,7 +40,7 @@ export default function Hero() {
       <div className="relative z-10 mx-auto max-w-6xl pr-4 sm:pr-0">
         <FadeIn>
           <p className="mb-4 max-w-xs font-mono text-[10px] uppercase leading-relaxed tracking-[0.12em] text-brick sm:mb-[clamp(1rem,3vw,1.5rem)] sm:max-w-none sm:text-[11px] sm:tracking-[0.14em]">
-            Aotearoa&apos;s pickleball society for builders
+            Where Aotearoa&apos;s builders rally together
           </p>
         </FadeIn>
 
@@ -56,10 +56,12 @@ export default function Hero() {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <p className="mt-5 max-w-[520px] text-base leading-relaxed text-clay sm:mt-[clamp(1.25rem,3vw,2rem)] sm:text-[clamp(1rem,2.2vw,1.125rem)]">
-            The founders, operators and builders of New Zealand — swapping the
-            boardroom for the baseline. Good rallies, better connections, zero
-            pitch decks.
+          <p className="mt-5 max-w-[560px] text-base leading-relaxed text-clay sm:mt-[clamp(1.25rem,3vw,2rem)] sm:text-[clamp(1rem,2.2vw,1.125rem)]">
+            A community for founders, operators, investors, and anyone
+            building across New Zealand who loves or wants to try
+            pickleball. Whether you&apos;re a seasoned player or a first-timer
+            with a paddle, you belong here. Come for the rallies, stay for the
+            connections.
           </p>
         </FadeIn>
 
@@ -70,10 +72,10 @@ export default function Hero() {
               onClick={handleApplyClick}
               className="inline-flex min-h-12 items-center justify-center rounded-full bg-brick px-6 py-3 text-center font-sans text-base font-extrabold text-sand transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink sm:min-h-0 sm:w-auto sm:text-[clamp(0.875rem,2vw,1rem)]"
             >
-              Apply to join →
+              Apply to join
             </a>
             <span className="text-center font-mono text-[10px] uppercase tracking-[0.12em] text-stone sm:text-left sm:text-[11px]">
-              Members only · By application
+              Members only · All skill levels welcome
             </span>
           </div>
         </FadeIn>

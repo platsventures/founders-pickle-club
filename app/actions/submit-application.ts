@@ -7,7 +7,7 @@ const applicationSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email"),
   company: z.string().min(2, "Company / role must be at least 2 characters"),
-  reason: z.string().min(10, "Tell us a bit more — at least 10 characters"),
+  reason: z.string().min(10, "Tell us a bit more (at least 10 characters)"),
   website: z.string().max(0, "Invalid submission"),
 });
 
@@ -59,7 +59,7 @@ export async function submitApplication(
     console.error("[submitApplication] Failed:", error);
     return {
       ok: false,
-      errors: { _form: "Something went wrong — try again." },
+      errors: { _form: "Something went wrong. Try again." },
     };
   }
 }

@@ -20,7 +20,7 @@ const dmMono = DM_Mono({
 export const metadata: Metadata = {
   title: "Founders Pickle Club",
   description:
-    "Aotearoa's pickleball society for founders, operators and builders.",
+    "Where Aotearoa's founders, operators, and builders rally together on the court. All skill levels welcome.",
 };
 
 export const viewport = {
