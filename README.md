@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Founders Pickle Club
 
-## Getting Started
+Single-page marketing site for Founders Pickle Club — Aotearoa's pickleball society for builders.
 
-First, run the development server:
+Built with **Next.js 14 (App Router)**, **TypeScript**, **Tailwind CSS**, and **SaaSco** for analytics + CRM.
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+No environment variables are required. The SaaSco project ID is set in `lib/saasco.ts`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## SaaSco — analytics + CRM
 
-## Learn More
+SaaSco handles both event tracking and contact storage for this site.
 
-To learn more about Next.js, take a look at the following resources:
+**Client-side** (`lib/SaascoAnalytics.tsx`):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Automatic pageviews after `saasco.init()`
+- Intent events: Apply CTA clicks, form started, city pill clicks, submit another
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Server-side** (`lib/submit-application.ts`):
 
-## Deploy on Vercel
+- `saasco.identify()` — creates/updates a CRM contact with name, email, company, reason
+- `saasco.track()` — records `Application Submitted` linked to that contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+View contacts and their event history in the [SaaSco CRM dashboard](https://www.saasco.com/features/crm).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Project ID: `cmqz0fxjf0000psp7r8tad5v1` (configured in `lib/saasco.ts`).
+
+Set `enabled: false` in `lib/saasco.ts` to disable event sending in development if desired.
+
+## Project structure
+
+```
+app/
+  layout.tsx          # Fonts, metadata, SaaSco init
+  page.tsx            # Composes all sections
+  actions/            # Server Action + Zod validation
+components/
+  TopBar.tsx          # Navigation
+  Hero.tsx            # Hero + retro sun
+  WhoShowsUp.tsx      # Member types grid
+  Courts.tsx          # City pills
+  ApplyForm.tsx       # Client form (useFormState)
+  Footer.tsx
+lib/
+  submit-application.ts  # SaaSco identify + track on submit
+  saasco.ts              # SaaSco SDK config
+  SaascoAnalytics.tsx    # Client init component
+```
+
+## Scripts
+
+```bash
+npm run dev      # Development server
+npm run build    # Production build
+npm run start    # Production server
+npm run lint     # ESLint
+```

@@ -9,8 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        sand: "#F3E7D0",
+        ink: "#2E1C12",
+        rust: "#D4622B",
+        brick: "#B0411F",
+        gold: "#E6A338",
+        peach: "#E89B6C",
+        tan: "#cbb89e",
+        clay: "#4a3424",
+        stone: "#6b5a45",
+      },
+      fontFamily: {
+        sans: ["var(--font-archivo)", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+      },
+      borderRadius: {
+        card: "3px",
       },
     },
   },
