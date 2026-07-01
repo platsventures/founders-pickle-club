@@ -44,7 +44,7 @@ export default function TopBar() {
           href="#"
           className="font-sans text-[clamp(12px,3.5vw,15px)] font-black uppercase leading-tight tracking-[0.04em] text-ink"
         >
-          FOUNDERS PICKLE CLUB
+          Founders Pickleball Club
         </a>
 
         <nav
