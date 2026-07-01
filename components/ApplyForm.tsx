@@ -133,7 +133,7 @@ export default function ApplyForm() {
                       name="name"
                       type="text"
                       required
-                      placeholder="Jacinda Builder"
+                      placeholder="Plats Loukoianov"
                       onFocus={handleFieldInteraction}
                       aria-invalid={!!state.errors?.name}
                       aria-describedby={state.errors?.name ? "name-error" : undefined}
@@ -175,7 +175,7 @@ export default function ApplyForm() {
                       name="company"
                       type="text"
                       required
-                      placeholder="Co-founder @ Kowhai Labs"
+                      placeholder="Co-founder @ saasco.com"
                       onFocus={handleFieldInteraction}
                       aria-invalid={!!state.errors?.company}
                       aria-describedby={state.errors?.company ? "company-error" : undefined}
