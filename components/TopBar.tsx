@@ -38,8 +38,8 @@ export default function TopBar() {
     "flex min-h-12 items-center border-b border-ink/15 font-mono text-[11px] uppercase tracking-[0.12em] text-ink transition-opacity hover:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brick last:border-b-0";
 
   return (
-    <header className="border-b-[1.5px] border-ink bg-sand">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-[clamp(1rem,4vw,2rem)] sm:py-4">
+    <header className="border-b-[1.5px] border-ink bg-sand px-4 sm:px-[clamp(1rem,4vw,2rem)]">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 py-3 sm:py-4">
         <a
           href="#"
           className="font-sans text-[clamp(12px,3.5vw,15px)] font-black uppercase leading-tight tracking-[0.04em] text-ink"
@@ -104,7 +104,7 @@ export default function TopBar() {
       {menuOpen && (
         <nav
           id="mobile-nav"
-          className="border-t border-ink/15 bg-sand px-4 py-2 md:hidden"
+          className="mx-auto max-w-6xl border-t border-ink/15 py-2 md:hidden"
           aria-label="Mobile navigation"
         >
           <a href="#who" className={mobileNavLinkClass} onClick={handleNavClick}>
