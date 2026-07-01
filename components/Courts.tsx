@@ -10,11 +10,7 @@ type City = {
 
 const cities: City[] = [
   { name: "Auckland", variant: "gold" },
-  { name: "Wellington", variant: "gold" },
-  { name: "Christchurch", variant: "peach" },
   { name: "Queenstown", variant: "peach" },
-  { name: "Tauranga", variant: "outline" },
-  { name: "Dunedin", variant: "outline" },
 ];
 
 const variantClasses: Record<City["variant"], string> = {
@@ -49,7 +45,7 @@ export default function Courts() {
           <FadeIn delay={0.05}>
             <p className="max-w-full font-mono text-[10px] uppercase leading-relaxed tracking-[0.1em] text-stone sm:max-w-[360px] sm:text-[11px] sm:tracking-[0.12em]">
               Weekly casual sessions, post-court hangouts, and the occasional
-              clinic or round-robin. Auckland and Wellington live now. More
+              clinic or round-robin. Auckland and Queenstown live now. More
               cities as members land.
             </p>
           </FadeIn>
