@@ -8,10 +8,7 @@ type City = {
   variant: "gold" | "peach" | "outline";
 };
 
-const cities: City[] = [
-  { name: "Auckland", variant: "gold" },
-  { name: "Queenstown", variant: "peach" },
-];
+const cities: City[] = [{ name: "Auckland", variant: "gold" }];
 
 const variantClasses: Record<City["variant"], string> = {
   gold: "bg-gold text-ink border-gold",
@@ -45,14 +42,14 @@ export default function Courts() {
           <FadeIn delay={0.05}>
             <p className="max-w-full font-mono text-[10px] uppercase leading-relaxed tracking-[0.1em] text-stone sm:max-w-[360px] sm:text-[11px] sm:tracking-[0.12em]">
               Weekly casual sessions, post-court hangouts, and the occasional
-              clinic or round-robin. Auckland and Queenstown live now. More
-              cities as members land.
+              clinic or round-robin. Auckland live now. More cities as
+              members land.
             </p>
           </FadeIn>
         </div>
 
         <FadeIn delay={0.1}>
-          <div className="mt-8 grid grid-cols-2 gap-2.5 sm:mt-[clamp(2rem,5vw,3rem)] sm:flex sm:flex-wrap sm:gap-3">
+          <div className="mt-8 flex flex-wrap gap-2.5 sm:mt-[clamp(2rem,5vw,3rem)] sm:gap-3">
             {cities.map((city) => (
               <button
                 key={city.name}
