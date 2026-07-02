@@ -113,13 +113,6 @@ export default function TopBar() {
           <a href="#where" className={mobileNavLinkClass} onClick={handleNavClick}>
             Where
           </a>
-          <a
-            href="#apply"
-            className="mt-3 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-brick px-4 py-3 font-mono text-[11px] uppercase tracking-[0.12em] text-sand transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
-            onClick={handleJoinClick}
-          >
-            Join the club
-          </a>
         </nav>
       )}
     </header>
