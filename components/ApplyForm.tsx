@@ -175,7 +175,7 @@ export default function ApplyForm() {
                       name="company"
                       type="text"
                       required
-                      placeholder="Co-founder @ saasco.com"
+                      placeholder="Founder @ founderspickleball club"
                       onFocus={handleFieldInteraction}
                       aria-invalid={!!state.errors?.company}
                       aria-describedby={state.errors?.company ? "company-error" : undefined}
